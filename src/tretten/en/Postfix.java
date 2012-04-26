@@ -58,7 +58,7 @@ public class Postfix {
 			stack.push(stack.pop() / stack.pop());
 		else if (c.equals("%"))
 			stack.push(stack.pop() % stack.pop());
-		else
+		else if (!c.equals(" "))
 			stack.push(Integer.parseInt(c));
 	}
 
